@@ -1,0 +1,62 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+:after,:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #444;
+  font-family: 'Roboto', arial, sans-serif;
+}
+
+.wrapper {
+  background-color: #f6f6f6;
+  height: 100%;
+  @include min(1024px) {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+p {
+  margin: 0 0 15px;
+  @include min(1024px) {
+    margin: 0 0 20px;
+  }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-20 {
+  padding-top: 20px;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
