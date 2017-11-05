@@ -20,7 +20,10 @@ html, body {
 
 .wrapper {
   background-color: #f6f6f6;
-  height: 100%;
+  padding: 0 20px;
+  &.full-height {
+    height: 100%;
+  }
   @include min(1024px) {
     width: 1024px;
     margin: 0 auto;
@@ -52,6 +55,10 @@ p {
 
 .mt-20 {
   margin-top: 20px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
 }
 
 .pd-20 {

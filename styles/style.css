@@ -18,7 +18,9 @@ html, body {
 
 .wrapper {
   background-color: #f6f6f6;
-  height: 100%; }
+  padding: 0 20px; }
+  .wrapper.full-height {
+    height: 100%; }
   @media screen and (min-width: 1024px) {
     .wrapper {
       width: 1024px;
@@ -45,6 +47,9 @@ p {
 .mt-20 {
   margin-top: 20px; }
 
+.mb-50 {
+  margin-bottom: 50px; }
+
 .pd-20 {
   padding: 20px; }
 
@@ -58,6 +63,80 @@ p {
 .clearfix:after {
   clear: both; }
 
+/* Color palette */
+.column-color {
+  width: 360px; }
+  .column-color .color-tag {
+    padding: 10px 15px 11px; }
+    .column-color .color-tag.dark span {
+      color: rgba(0, 0, 0, 0.87); }
+    .column-color .color-tag.light span {
+      color: rgba(255, 255, 255, 0.87); }
+    .column-color .color-tag .group {
+      display: block;
+      margin-bottom: 53px; }
+    .column-color .color-tag .detail {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .column-color .color-tag .detail span {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400; }
+      .column-color .color-tag .detail .hex {
+        text-align: right;
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1; }
+
+.red .primary-color {
+  background-color: #F44336; }
+
+.red .c50 {
+  background-color: #FFEBEE; }
+
+.red .c100 {
+  background-color: #FFCDD2; }
+
+.red .c200 {
+  background-color: #EF9A9A; }
+
+.red .c300 {
+  background-color: #E57373; }
+
+.red .c400 {
+  background-color: #EF5350; }
+
+.red .c500 {
+  background-color: #F44336; }
+
+.red .c600 {
+  background-color: #E53935; }
+
+.red .c700 {
+  background-color: #D32F2F; }
+
+.red .c800 {
+  background-color: #C62828; }
+
+.red .c900 {
+  background-color: #B71C1C; }
+
+.red .a100 {
+  background-color: #FF8A80; }
+
+.red .a200 {
+  background-color: #FF5252; }
+
+.red .a400 {
+  background-color: #FF1744; }
+
+.red .a700 {
+  background-color: #D50000; }
+
+/* Paper style */
 .box {
   display: inline-block;
   width: 100px;

@@ -1,0 +1,81 @@
+/* Color palette */
+.column-color {
+  width: 360px;
+  .color-tag {
+    padding: 10px 15px 11px;
+    &.dark {
+      span {
+        color: rgba(0,0,0,.87)
+      }
+    }
+    &.light {
+      span {
+        color: rgba(255,255,255,.87)
+      }
+    }
+    .group {
+      display: block;
+      margin-bottom: 53px;
+    }
+    .detail {
+      display: flex;
+      span {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+      }
+      .hex {
+        text-align: right;
+        flex-grow: 1;
+      }
+    }
+  }
+}
+
+.red {
+  .primary-color {
+    background-color: #F44336;
+  }
+  .c50 {
+    background-color: #FFEBEE;
+  }
+  .c100 {
+    background-color: #FFCDD2;
+  }
+  .c200 {
+    background-color: #EF9A9A;
+  }
+  .c300 {
+    background-color: #E57373;
+  }
+  .c400 {
+    background-color: #EF5350;
+  }
+  .c500 {
+    background-color: #F44336;
+  }
+  .c600 {
+    background-color: #E53935;
+  }
+  .c700 {
+    background-color: #D32F2F;
+  }
+  .c800 {
+    background-color: #C62828;
+  }
+  .c900 {
+    background-color: #B71C1C;
+  }
+  .a100 {
+    background-color: #FF8A80;
+  }
+  .a200 {
+    background-color: #FF5252;
+  }
+  .a400 {
+    background-color: #FF1744;
+  }
+  .a700 {
+    background-color: #D50000;
+  }
+}
