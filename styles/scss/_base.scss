@@ -1,3 +1,5 @@
+$main-color: #2196F3;
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -10,12 +12,14 @@
   box-sizing: border-box
 }
 
-html, body {
-  height: 100%;
+body {
   margin: 0;
   padding: 0;
   color: #444;
   font-family: 'Roboto', arial, sans-serif;
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 .wrapper {
@@ -31,10 +35,26 @@ html, body {
 }
 
 p {
+  color: #444;
   margin: 0 0 15px;
   @include min(1024px) {
     margin: 0 0 20px;
   }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  @include transition;
+  color: #444;
+  text-decoration: none;
 }
 
 .text-left {
