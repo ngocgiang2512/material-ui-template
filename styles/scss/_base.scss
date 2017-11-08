@@ -23,21 +23,38 @@ body {
 }
 
 .wrapper {
-  background-color: #f6f6f6;
-  padding: 0 20px;
-  &.full-height {
-    height: 100%;
-  }
-  @include min(1024px) {
-    width: 1024px;
+  padding: 0 15px;
+  @include min(1200px) {
+    width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-flow: column;
+  margin-left: -15px;
+  margin-right: -15px;
+  @include min(768px) {
+    flex-flow: row;
+  }
+  .col {
+    flex: 1;
+    padding: 0 15px;
+  }
+  .col2 {
+    flex: 2;
+  }
+  .col3 {
+    flex: 3;
   }
 }
 
 p {
   color: #444;
   margin: 0 0 15px;
-  @include min(1024px) {
+  @include min(1200px) {
     margin: 0 0 20px;
   }
 }
