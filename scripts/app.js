@@ -10,14 +10,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // -------------------------------------------------------------
   // Left Navigation
   // -------------------------------------------------------------
+  var body = document.body;
   var navIcon = document.querySelector("#navIcon");
   var overlay = document.querySelector("#overlay");
-  var leftNav = document.querySelector("#leftNav");
   var backIcon = document.querySelector(".back");
+  var content = document.querySelector("#content");
 
-  navIcon.addEventListener("click", openLeftNav);
-  overlay.addEventListener("click", closeLeftNav);
+  navIcon.addEventListener('click', function() {
+    body.hasClass('showNav') ? closeLeftNav() : openLeftNav();
+  })
+  
   backIcon.addEventListener("click", closeLeftNav);
+  content.addEventListener("click", closeLeftNav);
+  overlay.addEventListener("click", closeLeftNav);
 
 });
 
@@ -27,15 +32,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 // -------------------------------------------------------------
 
 function openLeftNav() {
-  document.body.addClass('no-scroll');
-  overlay.addClass('show');
-  leftNav.addClass('show');
+  document.body.addClass('showNav');
 }
 
 function closeLeftNav() {
-  document.body.removeClass('no-scroll');
-  overlay.removeClass('show');
-  leftNav.removeClass('show');
+  document.body.removeClass('showNav');
 }
 
 Element.prototype.hasClass = function(cls) {
