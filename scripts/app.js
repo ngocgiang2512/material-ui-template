@@ -12,17 +12,36 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // -------------------------------------------------------------
   var body = document.body;
   var navIcon = document.querySelector("#navIcon");
-  var overlay = document.querySelector("#overlay");
-  var backIcon = document.querySelector(".back");
-  var content = document.querySelector("#content");
+  if (navIcon !== null) {
+    var overlay = document.querySelector("#overlay");
+    var backIcon = document.querySelector(".back");
+    var content = document.querySelector("#content");
 
-  navIcon.addEventListener('click', function() {
-    body.hasClass('showNav') ? closeLeftNav() : openLeftNav();
-  })
-  
-  backIcon.addEventListener("click", closeLeftNav);
-  content.addEventListener("click", closeLeftNav);
-  overlay.addEventListener("click", closeLeftNav);
+    navIcon.addEventListener('click', function() {
+      body.hasClass('showNav') ? closeLeftNav() : openLeftNav();
+    })
+    
+    backIcon.addEventListener("click", closeLeftNav);
+    content.addEventListener("click", closeLeftNav);
+    overlay.addEventListener("click", closeLeftNav);
+  }
+
+  // -------------------------------------------------------------
+  // Card - Toggle supporting text
+  // -------------------------------------------------------------
+  var toggleIcon = document.querySelector(".toggle-icon");
+  if (toggleIcon !== null) {
+    var text = document.querySelector(".supporting-text");
+    toggleIcon.addEventListener('click', function() {
+      if (this.hasClass('up')) {
+        this.removeClass('up');
+        text.removeClass('hide');
+      } else {
+        this.addClass('up');
+        text.addClass('hide');
+      }
+    })
+  }
 
 });
 
